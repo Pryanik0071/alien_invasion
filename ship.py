@@ -16,6 +16,7 @@ class Ship:
 
         # Флаг перемещения
         self.moving_right = False
+        self.moving_left = False
 
     def blitme(self):
         """Рисует кораблю в текущей позиции."""
@@ -25,3 +26,5 @@ class Ship:
         """Обновляет позицию корабля с учетом флага"""
         if self.moving_right:
             self.rect.x += 1
+        if self.moving_left:
+            self.rect.x -= 1
